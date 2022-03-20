@@ -24,9 +24,9 @@ public final class CoreDataFeedStore: FeedStore {
                 let request = NSFetchRequest<ManagedCache>(entityName: ManagedCache.entity().name!)
                 request.returnsObjectsAsFaults = false
                 if let cache = try ManagedCache.find(in: context) {
-                    completion(.found(feed: cache.localFeed, timestamp: cache.timestamp))
+                    completion(.success(CachedFeed(feed: cache.localFeed, timestamp: cache.timestamp)))
                 } else {
-                    completion(.empty)
+                    completion(.success(.none))
                 }
             } catch {
                 completion(.failure(error))
@@ -44,20 +44,20 @@ public final class CoreDataFeedStore: FeedStore {
                 managedCache.feed = ManagedFeedImage.images(from: feed, in: context)
                 
                 try context.save()
-                completion(nil)
+                completion(.success(()))
             } catch {
-                completion(error)
+                completion(.failure(error))
             }
         }
     }
     
     public func deleteCachedFeed(completion: @escaping DeletionCompletion) {
-        perform{ context in 
+        perform { context in 
                      do {
                          try ManagedCache.find(in: context).map(context.delete).map(context.save)
-                         completion(nil)
+                         completion(.success(()))
                      } catch {
-                         completion(error)
+                         completion(.failure(error))
                      }
                  }
     }
