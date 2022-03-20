@@ -65,7 +65,7 @@ class LoadFeedFromRemoteUseCaseTests: XCTestCase {
         let (sut, client) = makeSUT()
         
         expect(sut, toCompleteWith: failure(.invalidData), when: {
-            let invalidJSON = Data(bytes: "invalid json".utf8)
+            let invalidJSON = Data("invalid json".utf8)
             client.complete(withStatusCode: 200, data: invalidJSON)
         })
     }
@@ -121,17 +121,15 @@ class LoadFeedFromRemoteUseCaseTests: XCTestCase {
     
     // MARK: - Helpers
     
-    private func makeItem(id: UUID, description: String? = nil, location: String? = nil, imageURL: URL) -> (model: FeedItem, json: [String: Any]) {
-             let item = FeedItem(id: id, description: description, location: location, imageURL: imageURL)
+    private func makeItem(id: UUID, description: String? = nil, location: String? = nil, imageURL: URL) -> (model: FeedImage, json: [String: Any]) {
+             let item = FeedImage(id: id, description: description, location: location, url: imageURL)
 
              let json = [
                  "id": id.uuidString,
                  "description": description,
                  "location": location,
                  "image": imageURL.absoluteString
-             ].reduce(into: [String: Any]()) { (acc, e) in
-                 if let value = e.value { acc[e.key] = value }
-             }
+             ].compactMapValues { $0 }
 
              return (item, json)
          }
@@ -178,7 +176,7 @@ class LoadFeedFromRemoteUseCaseTests: XCTestCase {
     
     private class HTTPClientSpy:HTTPClient {
         
-        func get(from url: URL, completion: @escaping (HTTPClientResult) -> Void)  {
+        func get(from url: URL, completion: @escaping (HTTPClient.Result) -> Void) {
             
             messages.append((url, completion))
         }
@@ -188,7 +186,8 @@ class LoadFeedFromRemoteUseCaseTests: XCTestCase {
         var error: Error?
      
         
-        private var messages = [(url: URL, completion: (HTTPClientResult) -> Void)]()
+        private var messages = [(url: URL, completion: (HTTPClient.Result) -> Void)]()
+
 
                  var requestedURLs: [URL] {
                      return messages.map { $0.url }
@@ -202,7 +201,7 @@ class LoadFeedFromRemoteUseCaseTests: XCTestCase {
         func complete(withStatusCode code: Int, data: Data, at index: Int = 0) {
          let response = HTTPURLResponse(url: requestedURLs[index], statusCode: code, httpVersion: nil, headerFields: nil)!
             
-            messages[index].completion(.success(data, response))
+            messages[index].completion(.success((data, response)))
         }
     }
 }
