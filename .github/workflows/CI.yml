@@ -13,7 +13,8 @@ jobs:
     strategy:
       matrix:
        run-config:
-          - { scheme: "CI_macOS", destination: "platform=macOS"}
+          - { scheme: "CI_macOS", destination: "platform=iOS Simulator,OS=15.2, name=iPhone 13"}
+           
 
 
 
