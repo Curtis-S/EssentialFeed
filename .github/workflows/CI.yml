@@ -14,7 +14,7 @@ jobs:
       matrix:
        run-config:
           - { scheme: 'CI_macOS', destination: 'platform=macOS' }
-          - { scheme: 'CI_IOS', destination: 'platform=iOS Simulator, id=146AC047-AC86-4BBF-B6D3-8D08520EDDC9, OS=15.2, name=iPhone 11 Pro' }
+          - { scheme: 'CI_IOS', destination: 'platform=iOS Simulator,OS=13.4.1,name=iPhone 8' }
 
     steps:
     - uses: actions/checkout@v2
