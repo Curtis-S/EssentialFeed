@@ -6,7 +6,7 @@
 //
 
 import UIKit
- import EssentialFeediOS
+import EssentialFeediOS
 
  extension FeedViewController {
      func simulateUserInitiatedFeedReload() {
@@ -59,4 +59,8 @@ import UIKit
      private var feedImagesSection: Int {
          return 0
      }
+     
+     var errorMessage: String? {
+              return errorView?.message
+          }
  }

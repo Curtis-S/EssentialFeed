@@ -1,0 +1,10 @@
+/* 
+  Feed.strings
+  EssentialFeed
+
+  Created by curtis scott on 22/04/2022.
+  
+*/
+
+"FEED_VIEW_TITLE" = "Το Feed μου";
+ "FEED_VIEW_CONNECTION_ERROR" = "Δεν ήταν δυνατή η σύνδεση στο διακομιστή";
