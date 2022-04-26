@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4Q7-fB-0N3">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="dark"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -19,8 +19,8 @@
                             <rect key="frame" x="0.0" y="0.0" width="414" height="110"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="this is  test" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rng-pg-kKh">
-                                    <rect key="frame" x="186" y="44" width="42" height="21"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="this is  test" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rng-pg-kKh">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="110"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
@@ -28,10 +28,10 @@
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBlueColor"/>
                             <constraints>
-                                <constraint firstItem="Rng-pg-kKh" firstAttribute="leading" secondItem="Hqt-Do-jiV" secondAttribute="leading" constant="186" id="5cT-VF-nke"/>
-                                <constraint firstItem="Rng-pg-kKh" firstAttribute="top" secondItem="Hqt-Do-jiV" secondAttribute="top" constant="44" id="YVK-iv-3b6"/>
-                                <constraint firstAttribute="trailing" secondItem="Rng-pg-kKh" secondAttribute="trailing" constant="186" id="nCr-ib-gOY"/>
-                                <constraint firstAttribute="bottom" secondItem="Rng-pg-kKh" secondAttribute="bottom" constant="45" id="sYI-oZ-Fko"/>
+                                <constraint firstAttribute="bottom" secondItem="Rng-pg-kKh" secondAttribute="bottom" id="Btq-wn-mbc"/>
+                                <constraint firstItem="Rng-pg-kKh" firstAttribute="leading" secondItem="Hqt-Do-jiV" secondAttribute="leading" id="SYk-4N-o5a"/>
+                                <constraint firstItem="Rng-pg-kKh" firstAttribute="top" secondItem="Hqt-Do-jiV" secondAttribute="top" id="b2J-Cw-QmW"/>
+                                <constraint firstAttribute="trailing" secondItem="Rng-pg-kKh" secondAttribute="trailing" id="ehJ-je-KmK"/>
                             </constraints>
                             <connections>
                                 <outlet property="label" destination="Rng-pg-kKh" id="FgH-iP-7Gr"/>
@@ -77,7 +77,7 @@
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="label,                                                                                 label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="87f-fy-1Vg">
                                                             <rect key="frame" x="16" y="0.0" width="358" height="54"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                            <color key="textColor" red="0.60784313729999995" green="0.60784313729999995" blue="0.60784313729999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="textColor" systemColor="secondaryLabelColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
@@ -120,7 +120,7 @@
                                                     <rect key="frame" x="0.0" y="448" width="374" height="182"/>
                                                     <string key="text">LabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabeldrgdfgdfgdfgdfgfdgdfgdfgfdgdfgdfg</string>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <color key="textColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="textColor" systemColor="secondaryLabelColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -172,6 +172,9 @@
     </scenes>
     <resources>
         <image name="pin" width="10" height="14"/>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

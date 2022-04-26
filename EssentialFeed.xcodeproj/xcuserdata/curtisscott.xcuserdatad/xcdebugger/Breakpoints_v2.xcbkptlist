@@ -30,8 +30,8 @@
             filePath = "EssentialFeediOS/Feed UI/Controllers/FeedViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "45"
-            endingLineNumber = "45"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
             landmarkName = "display(_:)"
             landmarkType = "7">
             <Locations>
@@ -95,6 +95,21 @@
                   endingLineNumber = "40"
                   offsetFromSymbolStart = "86">
                </Location>
+               <Location
+                  uuid = "8190AE6D-5E19-4DC5-8F51-AD077AEE716B - b4487a2c42f5a7fd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "EssentialFeediOS.FeedViewController.display(EssentialFeed.FeedErrorViewModel) -&gt; ()"
+                  moduleName = "EssentialFeediOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/curtisscott/Documents/Road%20to%20senior/EssentialFeed/EssentialFeediOS/Feed%20UI/Controllers/FeedViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "45"
+                  endingLineNumber = "45"
+                  offsetFromSymbolStart = "74">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -108,8 +123,8 @@
             filePath = "EssentialFeediOS/Feed UI/Controllers/FeedViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
             landmarkName = "display(_:)"
             landmarkType = "7">
             <Locations>
@@ -158,6 +173,21 @@
                   endingLineNumber = "41"
                   offsetFromSymbolStart = "107">
                </Location>
+               <Location
+                  uuid = "76A31D35-C0FE-4632-83FF-14FB3513B261 - b4487a2c42f5a73b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "EssentialFeediOS.FeedViewController.display(EssentialFeed.FeedErrorViewModel) -&gt; ()"
+                  moduleName = "EssentialFeediOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/curtisscott/Documents/Road%20to%20senior/EssentialFeed/EssentialFeediOS/Feed%20UI/Controllers/FeedViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "47"
+                  endingLineNumber = "47"
+                  offsetFromSymbolStart = "125">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -171,8 +201,8 @@
             filePath = "EssentialFeediOS/Feed UI/Controllers/FeedViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "46"
-            endingLineNumber = "46"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
             landmarkName = "display(_:)"
             landmarkType = "7">
             <Locations>
@@ -220,6 +250,21 @@
                   startingLineNumber = "40"
                   endingLineNumber = "40"
                   offsetFromSymbolStart = "86">
+               </Location>
+               <Location
+                  uuid = "E1DCD49A-C718-48EA-A1ED-8E9F5289CAB0 - b4487a2c42f5a71c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "EssentialFeediOS.FeedViewController.display(EssentialFeed.FeedErrorViewModel) -&gt; ()"
+                  moduleName = "EssentialFeediOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/curtisscott/Documents/Road%20to%20senior/EssentialFeed/EssentialFeediOS/Feed%20UI/Controllers/FeedViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "46"
+                  endingLineNumber = "46"
+                  offsetFromSymbolStart = "104">
                </Location>
             </Locations>
          </BreakpointContent>
