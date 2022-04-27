@@ -130,22 +130,10 @@ class LoadFeedFromCacheUseCaseTests: XCTestCase {
              XCTAssertEqual(store.receivedMessages, [.retrieve])
          }
     
-    func test_load_doesNotDeliverResultAfterSUTInstanceHasBeenDeallocated() {
-        let store = FeedStoreSpy()
-        var sut: LocalFeedLoader? = LocalFeedLoader(store: store, currentDate: Date.init)
-        
-        var receivedResults = [LocalFeedLoader.Result]()
-        sut?.load { receivedResults.append($0) }
-        
-        sut = nil
-        store.completeRetrievalWithEmptyCache()
-        
-        XCTAssertTrue(receivedResults.isEmpty)
-    }
     
     // MARK: - Helpers
     
-    private func expect(_ sut: LocalFeedLoader, toCompleteWith expectedResult: LocalFeedLoader.Result, when action: () -> Void, file: StaticString = #file, line: UInt = #line) {
+    private func expect(_ sut: LocalFeedLoader, toCompleteWith expectedResult: Result<[FeedImage], Error>, when action: () -> Void, file: StaticString = #file, line: UInt = #line) {
              let exp = expectation(description: "Wait for load completion")
 
              sut.load { receivedResult in
