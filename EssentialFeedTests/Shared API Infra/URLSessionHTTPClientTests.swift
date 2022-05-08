@@ -10,14 +10,10 @@ import EssentialFeed
 
 class URLSessionHTTPClientTests: XCTestCase {
     
-  
-    
     override func tearDown() {
         super.tearDown()
         URLProtocolStub.removeStub()
     }
-    
-    
     
     func test_getFromURL_performsGETRequestWithURL() {
         let url = anyURL()
